@@ -1,0 +1,109 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+}
+
+
+android {
+    namespace 'com.example.careergo'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.careergo"
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildFeatures {
+            viewBinding true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    // <<<< ADD THIS BLOCK >>>>
+    packagingOptions {
+        resources {
+            pickFirsts += [
+                    "META-INF/LICENSE.md",
+                    "META-INF/LICENSE.txt",
+                    "META-INF/NOTICE.md",
+                    "META-INF/NOTICE.txt"
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation libs.powerspinner
+    // Core AndroidX + Material
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.constraintlayout.core
+    implementation libs.recyclerview
+    implementation libs.glide
+
+
+    // Navigation
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+
+    // Firebase
+    implementation libs.firebase.firestore
+    implementation libs.firebase.database
+    implementation libs.firebase.storage
+    implementation libs.firebase.functions
+    implementation libs.firebase.auth
+
+    // Google Sign-In & Credentials
+    implementation libs.credentials
+    implementation libs.credentials.play.services.auth
+    implementation libs.googleid
+
+    // UI / Animations
+    implementation libs.core.splashscreen
+    implementation libs.lottie
+    implementation libs.circleimageview
+
+    // Mail / Activation
+    implementation libs.android.mail
+    implementation libs.android.activation
+
+    // RecyclerView (specific version if needed)
+    implementation libs.recyclerview.v132
+    implementation libs.firebase.messaging
+
+    // Testing
+    testImplementation libs.junit
+    testImplementation libs.truth
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    // Supabase Storage
+    implementation libs.retrofit
+    // Supabase
+    implementation 'io.github.jan-tennert.supabase:storage-kt:2.2.3'
+    implementation 'io.github.jan-tennert.supabase:realtime-kt:2.2.3'
+    implementation 'io.github.jan-tennert.supabase:postgrest-kt:3.0.1'
+    implementation libs.converter.gson
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+
+    // <<<< ADD THESE ONESIGNAL DEPENDENCIES >>>>
+    implementation 'com.onesignal:OneSignal:[4.8.6, 4.99.99]'
+
+
+
+
+}

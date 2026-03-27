@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="workType">
+        <item>Full-time</item>
+        <item>Part-time</item>
+        <item>Contract</item>
+        <item>Internship</item>
+        <item>Remote</item>
+    </string-array>
+
+    <string-array name="designation">
+        <item>Software Engineer</item>
+        <item>Product Manager</item>
+        <item>UI/UX Designer</item>
+        <item>Data Analyst</item>
+        <item>Business Analyst</item>
+        <item>Project Manager</item>
+        <item>Quality Assurance</item>
+        <item>DevOps Engineer</item>
+        <item>System Administrator</item>
+        <item>Network Engineer</item>
+    </string-array>
+</resources>

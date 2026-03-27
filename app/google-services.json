@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "794950975704",
+    "firebase_url": "https://careego-ec22e-default-rtdb.firebaseio.com",
+    "project_id": "careego-ec22e",
+    "storage_bucket": "careego-ec22e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794950975704:android:e2d7f7312ec62e35de17ad",
+        "android_client_info": {
+          "package_name": "com.example.careergo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBncFDaG8JgZb6OwjdcaiGDw08EB_cR-I8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

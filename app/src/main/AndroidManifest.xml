@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECT"
+        tools:targetApi="34" /> <!-- <<<< ADD THIS ONESIGNAL PERMISSION >>>> -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".Utility.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JobSpot"
+        tools:targetApi="31">
+        <activity
+            android:name=".User.PreferencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.JobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.EmployerApplicantsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.EmployerNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.StudentApplicationAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.StudentApplicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminJobApplicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminJobDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminEmployerJobsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminEmployerProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminEmployersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminJobsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminStudentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.StatusUpdateDialog"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Employer.StudentView"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.ApplicantView"
+            android:exported="false" />
+        <activity
+            android:name=".User.StudentProfile2"
+            android:exported="false" />
+        <activity
+            android:name=".User.StudentProfile"
+            android:exported="false" />
+        <activity
+            android:name=".User.UploadResume"
+            android:exported="false" />
+        <activity
+            android:name=".User.ViewResumeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.EditUserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserJobView"
+            android:exported="false" />
+        <activity
+            android:name=".User.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.SearchJobs"
+            android:exported="false" />
+        <activity
+            android:name=".User.SavedJobs"
+            android:exported="false" />
+        <activity
+            android:name=".User.AppliedJobs"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.EditEmployerProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.EmployerProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.JobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.JobViewEmployer"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.JobEdit"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.JobCreation2"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.JobCreation"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.PendingApproval"
+            android:exported="false" />
+        <activity
+            android:name=".Employer.EmployerHome"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.EmployerSignup"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.EmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.ForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Auth.SelectRoleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserHome"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

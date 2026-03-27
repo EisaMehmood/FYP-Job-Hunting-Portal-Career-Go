@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvJob"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/medium_padding"
+    android:layout_marginVertical="@dimen/small_margin"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_padding">
+
+        <!-- Company Logo -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCompanyLogo"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_apple_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Job Title -->
+        <TextView
+            android:id="@+id/tvJobRole"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:ellipsize="end"
+            android:fontFamily="@font/dm_sans_bold"
+            android:maxLines="2"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCompanyLogo"
+            app:layout_constraintTop_toTopOf="@+id/ivCompanyLogo"
+            tools:text="Senior Product Designer" />
+
+        <!-- Company Name -->
+        <TextView
+            android:id="@+id/tvCompanyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_small_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:ellipsize="end"
+            android:fontFamily="@font/dm_sans_medium"
+            android:maxLines="1"
+            android:textColor="@color/subheading_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCompanyLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobRole"
+            tools:text="Google • Mountain View, CA" />
+
+        <!-- Job Details Row -->
+        <LinearLayout
+            android:id="@+id/llJobDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCompanyLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvCompanyName">
+
+            <!-- Salary -->
+            <TextView
+                android:id="@+id/tvSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill"
+                android:fontFamily="@font/dm_sans_medium"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:paddingVertical="4dp"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                tools:text="₹80K/Mo" />
+
+            <!-- Experience (Optional - if you have this data) -->
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:background="@drawable/bg_pill_outline"
+                android:fontFamily="@font/dm_sans_medium"
+                android:paddingHorizontal="@dimen/small_margin"
+                android:paddingVertical="4dp"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="3-5 yrs" />
+
+        </LinearLayout>
+
+        <!-- Bottom Info Row -->
+        <LinearLayout
+            android:id="@+id/llBottomInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCompanyLogo"
+            app:layout_constraintTop_toBottomOf="@+id/llJobDetails">
+
+            <!-- Applications Count -->
+            <TextView
+                android:id="@+id/tvApplications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/extra_small_margin"
+                android:fontFamily="@font/dm_sans_regular"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_color_secondary"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_person"
+                tools:text="12 applicants" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Posted Date -->
+            <TextView
+                android:id="@+id/tvPostedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:textColor="@color/orange"
+                android:textSize="11sp"
+                tools:text="2 days ago" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

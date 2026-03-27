@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/medium_margin"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_marginEnd="@dimen/medium_margin"
+            app:tint="@color/text_color" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Applications"
+            android:textColor="@color/text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/dm_sans_bold" />
+
+        <TextView
+            android:id="@+id/tvApplicationsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 applications"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/dm_sans_medium" />
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/llSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/medium_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/search_background"
+            android:padding="@dimen/small_padding"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ivSearchIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                app:tint="@color/text_color_secondary" />
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search by job title, company..."
+                android:background="@null"
+                android:paddingVertical="@dimen/small_padding"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_secondary"
+                android:fontFamily="@font/dm_sans_medium"
+                android:imeOptions="actionSearch"
+                android:maxLines="1" />
+
+            <ImageView
+                android:id="@+id/ivClearSearch"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_close"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:visibility="gone"
+                app:tint="@color/text_color_secondary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Loading State -->
+    <LinearLayout
+        android:id="@+id/llLoading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:lottie_rawRes="@raw/loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading your applications..."
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16sp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:layout_marginTop="@dimen/medium_margin" />
+
+    </LinearLayout>
+
+    <!-- No Applications State -->
+    <LinearLayout
+        android:id="@+id/llNoApplications"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="@dimen/large_margin">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_no_applications"
+            app:tint="@color/text_color_secondary" />
+
+        <TextView
+            android:id="@+id/tvNoApplications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No applications yet"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/dm_sans_bold"
+            android:layout_marginTop="@dimen/medium_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start applying to jobs to see them here"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <!-- Applications List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppliedJobs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/small_margin"
+        android:clipToPadding="false" />
+
+</LinearLayout>
