@@ -77,7 +77,7 @@ Career-Go-App/
 
 1.  **Repository Initialization**
     ```bash
-    git clone [https://github.com/your-username/career-go-app.git](https://github.com/your-username/career-go-app.git)
+    git clone [https://github.com/EisaMehmood/FYP-Job-Hunting-Portal-Career-Go-/]
     ```
 
 2.  **`CONFIG` Firebase Setup**
